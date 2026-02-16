@@ -3,8 +3,6 @@ from crewai import Agent, Task, Crew
 from crewai.tools import tool
 from crewai_tools import PDFSearchTool
 
-# 1. Set your Gemini API Key
-os.environ["GEMINI_API_KEY"] = "AIzaSyDOAY2pZipsxvli08fyRwuAGF0ORfZt0l0"
 
 # 2. Configure PDF Tool to use Gemini
 # Ensure 'indian_recipes.pdf' is in your VS Code folder
@@ -47,3 +45,4 @@ if __name__ == "__main__":
     crew = Crew(agents=[chef_researcher], tasks=[recipe_task])
     result = crew.kickoff()
     print(result)
+
